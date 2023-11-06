@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-color: rgb(44, 38, 72);
+}
+.con-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap-reverse;   
+}
+
+.icons{
+    text-align: center;
+    list-style: none;
+    width: 750px;
+    height: 150px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px 10px rgb(33, 216, 240);
+    border-radius: 20px 20px 20px 20px;
+    animation: 3s ease infinite paused;
+    background-size: 200%;
+}
+.icons:hover{
+    animation-play-state: running;
+}
+.icons::after{
+    content: '';
+}
+
+.icons li {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+    margin: 30px;
+    transition: 1s;
+}
+
+.icons li::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid rgb(246, 249, 250);
+    box-shadow: 0px 0px 5px 5px rgb(14, 197, 247);
+    border-radius: 10px 10px 10px 10px;
+    transition: all 0.5 ease-in;
+}
+
+.icons li:hover::before {
+    transform: rotate(360deg);
+    border-radius: 50%;
+    transition: 1s;
+    box-shadow: 0px 0px 40px 15px rgb(49, 188, 247);
+}
+
+.icons li i {
+    font-size: 35px;
+    margin-top: 20px;
+    margin-left: 3px;
+    color: rgb(8, 201, 244);
+    transition: 1s;
+}
+
+.icons li i:hover {
+    transform: scale(1.4);
+    transition: 1s;
+    color: rgb(43, 192, 226);
+}
+
+  
+
+@keyframes  {
+    0%{
+        background-position: 0;
+    }
+    50%{
+        background-position: 100%;
+    }
+    100%{
+        background-position: 0 ;
+    }
+}
+
+
+  
